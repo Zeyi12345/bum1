@@ -1,0 +1,16 @@
+---
+config:
+  theme: forest
+  look: handDrawn
+  layout: dagre
+---
+flowchart TD
+    A(["Start Game"]) --> B{"Display Question"}
+    B --> C["Get user  answer"]
+    C --> D["Is answer correct?"]
+    D -- yes --> E["update score"]
+    D -- no --> F["show correct answer"]
+    E --> G{"More questions?"}
+    F --> G
+    G -- yes --> B
+    G -- No --> H["End Game"]
